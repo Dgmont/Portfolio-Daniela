@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Imágenes</title>
+    <style>
+        /* Estilos comunes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        /* Contenedor del carrusel */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contenedor de las imágenes */
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            cursor: grab; /* Cambia el cursor al mover */
+        }
+
+        /* Estilos para las imágenes */
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Contenedor de los puntos indicadores */
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        /* Estilos para los puntos indicadores */
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        /* Estilo para el punto activo */
+        .indicator.active {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Imágenes del carrusel -->
+            <img src="./img/alfabeto1.png" alt="Imagen 1">
+            <img src="./img/AM_Poster.jpg" alt="Imagen 2">
+            <img src="./img/castillo_Mesa de trabajo 1.png" alt="Imagen 3">
+            <img src="./img/ciudadinvisible.png" alt="Imagen 4">
+            <img src="./img/harry_ilustracion-05.png" alt="Imagen 5">
+            <img src="./img/Ola_prueba1.jpg" alt="Imagen 6">
+        </div>
+        <div class="carousel-indicators">
+            <!-- Puntos indicadores -->
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentIndex = 0;
+        let isDragging = false;
+        let startPosition = 0;
+        let currentTranslate = 0;
+
+        // Agrega los eventos de arrastre del mouse
+        carousel.addEventListener('mousedown', e => {
+            isDragging = true;
+            startPosition = e.clientX - carousel.offsetLeft;
+            currentTranslate = getTranslateX();
+        });
+
+        carousel.addEventListener('mousemove', e => {
+            if (isDragging) {
+                const currentPosition = e.clientX - carousel.offsetLeft;
+                const move = currentPosition - startPosition;
+                carousel.style.transform = `translateX(${currentTranslate + move}px)`;
+            }
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDragging = false;
+            snapToSlide();
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isDragging = false;
+            snapToSlide();
+        });
+
+        // Agrega los eventos de toque para dispositivos móviles
+        carousel.addEventListener('touchstart', e => {
+            isDragging = true;
+            startPosition = e.touches[0].clientX - carousel.offsetLeft;
+            currentTranslate = getTranslateX();
+        });
+
+        carousel.addEventListener('touchmove', e => {
+            if (isDragging) {
+                const currentPosition = e.touches[0].clientX - carousel.offsetLeft;
+                const move = currentPosition - startPosition;
+                carousel.style.transform = `translateX(${currentTranslate + move}px)`;
+            }
+        });
+
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
+            snapToSlide();
+        });
+
+        function snapToSlide() {
+            const slideWidth = carousel.children[0].offsetWidth;
+            const newPosition = Math.round(-currentTranslate / slideWidth) * slideWidth;
+            carousel.style.transform = `translateX(${newPosition}px)`;
+        }
+
+        function getTranslateX() {
+            const style = window.getComputedStyle(carousel);
+            const transform = style.transform || style.webkitTransform || style.mozTransform;
+            const matrix = transform.match(/matrix.*\((.+)\)/)[1].split(', ');
+            return parseInt(matrix[4]);
+        }
+    </script>
+</body>
+</html>

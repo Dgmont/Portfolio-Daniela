@@ -1,55 +1,119 @@
-header{
-    background-color: #172832;
-    width: 100%
-ul{
-    
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-}
-li{
-    background-color: #172832;
-    float: right;
-}
-li a{
-    background-color: #172832;
-    display: block;
-    align-items: right;
-    text-align: center;
-    padding: 14px 16px;
-}
-li a:hover{
+body.index{
     background-color: #F18D8F;
 }
-.menu-item img{
+body.contact{
+    background-color: white;
+}
+header{
     background-color: #172832;
+    width: 100%;
+    height: 95px;
+    position: fixed;
+}
+.menu{
     list-style-type: none;
-    width: 70px;
-    height: auto; 
-    margin-right: 5px;
-    vertical-align:middle;
+    padding-top: 25px;
+    margin: 0;
+    display:flex;
+    justify-content: end;
 }
-.about-menu{
+.about img{
+    width: 90px;
+    height: auto;
+    margin-right: 10px;
+    padding: 5px;
+    transition: all 0.3s ease-in;
+}
+.about:hover img{
+    content:url(./img/about-hover.png)
+}
+.gallery img{
+    width:90px;
+    height: auto;
+    margin-right: 10px;
+    padding: 5px;
+    padding-top: 5px;
+    transition: all 0.3s ease-in;
+}
+.gallery:hover img{
+    content:url(./img/gallery-hover.png)
+}
+.contact img{
+    width: 90px;
+    height: auto;
+    margin-right: 10px;
+    padding: 5px;
+    transition: all 0.3s ease-in;
+}
+.contact:hover img{
+    content:url(./img/contact-hover.png)
+}
+.home img{
+    width: 100px;
+    height: auto;
+    margin-right: 6px;
+    padding: 3px;
+    justify-content: start;
 
 }
-.about-menu:hover{
-    content:url(./img/ );
+.div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/Degradado1_1.gif);
+    background-size: cover;
+    height: 695px;
 }
-.gallery-menu{
+.mission img{
+    width: auto;
+    height:fit-content;
+    margin-top: 50px; 
+    padding: 80px;   
+}
+.titles{
+    background-color: #F18D8F;
+    height: 100vh;
+}
+.imagegrid{ 
+    display:flex;
+    flex-direction:row;
+}
+.twoimage{ 
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.imgtwogrid{
+    height: 652px;
+    width: auto;
+}
+.imggrande{
+    flex:1;
+    display: flex;
+    justify-content: right;
+}
 
+h2{
+    font-family: playfair display;
+    font-size: 48;
+    font-weight: bold;
+    color: white;
+    margin-left: 50px;
 }
-.gallery-menu:hover{
-
+h3{
+    font-family: playfair display;
+    font-size: 48;
+    font-weight: bold;
+    color:#1D1D1B;
+    margin-left: 50px;
 }
-.contact-menu{
-
+h4{
+    font-family: playfair display;
+    font-size: 48;
+    font-weight: bold;
+    color:#F18D8F;
+    margin-left: 50px;
 }
-.contact-menu:hover{
-
-}
-}
-
 footer{
     background-color:#C7EAE6;
     align-items: center;
