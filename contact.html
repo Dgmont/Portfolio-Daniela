@@ -6,18 +6,43 @@
     <title>Contact me</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./img/icono.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <ul class="menu">
-            <li class="home"><a href="./Index.html"><img src="./img/logo_B-05.png" alt="Home"></a></li>
-            <li class="about"><a href="./about.html"> <img src="./img/about.png" alt="About"></a></li>
-            <li class="gallery"><a href="./gallery.html"> <img src="./img/gallery.png" alt="Gallery"></a></li>
-            <li class="contact"><a href="./contact.html"> <img src="./img/contact.png" alt="Contact"></a></li>
-        </ul>
-    </header>
-
-     <footer>
+    <div>
+        <header>
+            <ul class="menu">
+                <li class="home"><a href="./Index.html"><img src="./img/logo_B-05.png" alt="Home"></a></li>
+                <li class="about"><a href="./about.html"> <img src="./img/about.png" alt="About"></a></li>
+                <li class="gallery"><a href="./gallery.html"> <img src="./img/gallery.png" alt="Gallery"></a></li>
+                <li class="contact"><a href="./contact.html"> <img src="./img/contact.png" alt="Contact"></a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="formulario">
+        <div class="container">
+            <form action=""> 
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required >
+                </div>
+                <div class="campo">
+                    <label for="name">Name</label>
+                    <input type="name" id="name" name="name" required>
+                </div>
+                <div class="campo">
+                    <label for="description">What do you need?</label>
+                    <textarea name="description" id="description" rows="4" required></textarea>
+                </div>
+                <button type="submit"> Send email</button>
+            </form>
+            <a href="https://wa.link/huny67" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Send whatsapp
+       </a>
+        </div>       
+    </div>
+     
+    <footer>
         <ul class="social-icons">
             <li class="instagram-item"><a href="https://www.instagram.com/dan_zmo/"><img src="./img/instagram.png" alt="Instagram"></a></li>
             <li class="facebook-item"> <a href="https://www.facebook.com/profile.php?id=61557057042380"> <img src="./img/facebook.png" alt="Facebook"></a></li>
