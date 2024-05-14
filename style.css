@@ -251,6 +251,70 @@ h3{
   width: 100%; /* Opcional: asegura que el texto ocupe todo el ancho */
 }
 
+#popup{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #172832;
+padding: 20px;
+border: none;
+box-shadow: 0 0 10px rgba(0, 0, 0, 3.1);
+visibility: hidden;
+opacity: 0;
+transition: visibility 2s, opacity 0.5s linear;
+}
+
+#popup:target {
+visibility: visible;
+opacity: 1;
+display: flex;
+flex-direction: column;
+}
+
+#popup p {
+margin-bottom: 10px;
+}
+
+#popup a {
+display: block;
+text-align: center;
+text-decoration: none;
+background-color:#F18D8F;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-bottom: 35px;
+font-size: medium;
+margin-left: 90px;
+margin-right: 90px;
+}
+#popup a:hover{
+    background-color: #AB0033;
+}
+.p{
+    display: flex;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px 20px
+}
+.a{
+   background-color:#F18D8F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 35px;
+    font-size: medium; 
+    text-decoration: none;
+    display: inline-block;
+}
+.a:hover{
+    background-color: #AB0033;
+}
 
 /*cantact*/
 .formulario{ 
