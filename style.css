@@ -114,8 +114,7 @@ h1{
     font-size: 60px;
     line-height: 0.7;
     font-style: italic;
-    margin-top: 5px;
-}
+    margin-top: 5px;}
 p{/*utilizada para los títulos de secciónes*/
     font-family: playfair display;
     font-size: xx-large;
@@ -131,6 +130,8 @@ h2{
 }
 h3{
     font-size: 30px;
+    font-family: poppins;
+    font-weight:400;
 }
 /*gallery*/
 .illustration{
@@ -215,7 +216,7 @@ h3{
     
 }
 .tema3{
-    background-image: url(./img/Degradado1_1\ \(1\).gif);
+    background-image: url(./img/DegradadoT_T\ \(1\).gif);
     background-size: cover;
     background-attachment: fixed;
     align-items: center;
@@ -244,7 +245,7 @@ h3{
 }
 .textos{
      margin: 0 60px;
-     
+
 }
 .texto-fijo {
   position: sticky;
