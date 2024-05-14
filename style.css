@@ -201,6 +201,7 @@ h3{
     display: flex;
     align-items: baseline;
     height: 850px;
+    flex-direction: row;
 }
 .tema2{
     background-color:  #F18D8F;
@@ -243,6 +244,7 @@ h3{
 }
 .textos{
      margin: 0 60px;
+     
 }
 .texto-fijo {
   position: sticky;
@@ -250,7 +252,6 @@ h3{
   transform: translateY(-50%);
   width: 100%; /* Opcional: asegura que el texto ocupe todo el ancho */
 }
-
 #popup{
 position: fixed;
 top: 50%;
@@ -264,18 +265,15 @@ visibility: hidden;
 opacity: 0;
 transition: visibility 2s, opacity 0.5s linear;
 }
-
 #popup:target {
 visibility: visible;
 opacity: 1;
 display: flex;
 flex-direction: column;
 }
-
 #popup p {
 margin-bottom: 10px;
 }
-
 #popup a {
 display: block;
 text-align: center;
