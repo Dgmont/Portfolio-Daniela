@@ -70,7 +70,7 @@ header{
     display:flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./img/Degradado1_1.gif);
+    background-image: url(./img/Degradado1_1\ \(1\).gif);
     background-size: cover;
     height: 695px;
 }
@@ -107,6 +107,91 @@ header{
     width: 450px;
     padding-bottom: 15px;
 }
+
+/*textos*/
+h1{
+    font-size: 60px;
+    line-height: 0.7;
+    font-style: italic;
+    margin-top: 5px;
+}
+p{/*utilizada para los títulos de secciónes*/
+    font-family: playfair display;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+    margin-left: 70px;
+    padding-top: 28px;
+}
+h2{
+    font-style: italic;
+    font-size: 48px;
+}
+h3{
+    font-size: 30px;
+}
+/*gallery*/
+.illustration{
+    background-color: #F18D8F;
+    padding-top: 118px;
+    color: white;
+    padding-bottom: 90px;
+
+}
+.editorial{
+    margin-left: 80px;
+    padding: 10px 0;
+    margin-top: 25px;
+}
+.title2{
+    margin-top: 25px;
+    margin-left: 80px;
+    padding: 10px 0;
+}
+.carrusel{
+    display:flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin: 20px 80px;
+}
+.imgc{
+    height: 500px;
+    scroll-snap-align: center;
+    width: auto;
+    padding: 0 10px;
+}
+.brandingimg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.imgb{
+    height: 400px;
+    width: auto;
+}
+.imgb2{
+    height: 350px;
+}
+.poster{
+    background-color: #06262D;
+    color: white;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+.posterimg{
+    height: 380px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.imgp{
+    padding: 0 10px;
+}
+
 /*about*/
 .tema1{
     margin-top: 130px;
@@ -128,7 +213,7 @@ header{
     
 }
 .tema3{
-    background-image: url(./img/DegradadoT_T.gif);
+    background-image: url(./img/Degradado1_1\ \(1\).gif);
     background-size: cover;
     background-attachment: fixed;
     align-items: center;
@@ -152,14 +237,12 @@ header{
 .gif{
     height: 420px;
     position: sticky;
-    top: 40%;
+    top: 36%;
     background-attachment: fixed;
 }
-
 .textos{
      margin: 0 60px;
 }
-
 .texto-fijo {
   position: sticky;
   top: 60%; /* Ajusta el desplazamiento vertical según sea necesario */
@@ -168,31 +251,7 @@ header{
 }
 
 
-
-
-
-
-
-/*textos*/
-h1{
-    font-size: 60px;
-    line-height: 0.7;
-    font-style: italic;
-    margin-top: 5px;
-}
-
-p{/*utilizada para los títulos de secciónes*/
-    font-family: playfair display;
-    font-size: xx-large;
-    font-weight: bold;
-    color: white;
-    margin-left: 70px;
-    padding-top: 28px;
-}
-
-/*gallery*/
-
-/*about*/
+/*cantact*/
 .formulario{ 
 	margin-top: 100px;
     display: flex;
@@ -238,7 +297,6 @@ button{
 button:hover{
     background-color: #AB0033;
 }
-
 .whatsapp-btn{
     
     background-color: #F18D8F;
